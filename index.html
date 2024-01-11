@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Information Form</title>
+
+<style>
+body {
+    font-family: FreeMono, monospace;
+    background-color:#e894a7;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color:#e894a7;
+}
+
+
+
+form {
+    background-color: #321e25;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 2px solid #321e25;
+    border-radius: 4px;
+}
+
+input:focus, select:focus {
+    border: 3px solid #e894a7;
+    outline: none;
+}
+
+input[type="submit"] {
+    font-family: FreeMono, monospace;
+    background-color: #8b4e5e;
+    color: #e894a7;
+    font-size: large;
+    font-weight: bold;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color:#663845;
+}
+
+</style>
+</head>
+<body>
+    
+    <form action="https://www2.cs.torontomu.ca/~acezette/cgi-bin/lab10r.cgi" method="post">
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required><br>
+
+        <label for="province">Province/State:</label>
+        <input type="text" id="province" name="province"><br>
+
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" required><br>
+
+        <label for="picture_url">Picture URL:</label>
+        <input type="url" id="picture_url" name="picture_url" required><br>
+
+        <input type="submit" value="Submit (Ruby)">
+        <input type="submit" formaction="https://www2.cs.torontomu.ca/~acezette/cgi-bin/lab10p.cgi" value="Submit (Python)">
+    </form>
+</body>
+</html>
+
